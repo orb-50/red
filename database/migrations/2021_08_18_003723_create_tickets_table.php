@@ -25,8 +25,8 @@ class CreateTicketsTable extends Migration
             $table->bigInteger('priority')->unsigned();
             $table->string('progress')->default("0");
             $table->float('work_hours')->default(0.0);
-            $table->date('sStartAt')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->date('sFinishAt')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->date('sStartAt')->nullable();
+            $table->date('sFinishAt')->nullable();
             $table->date('startAt')->nullable();
             $table->date('finishAt')->nullable();
             $table->timestamps();
