@@ -131,7 +131,11 @@
                     @if(!isset($comment["pararent_id"]))
                     <div class="commented-section mt-2">
                         <div class="d-flex flex-row align-items-center commented-user">
-                            <img  class="img-fluid img-parent" src="{{asset('storage/images/'.($comment->user->image??'user_default.jpg'))}}">
+                            @if ($comment->user->image=="user_default.jpg")
+                            <img class="img-fluid img-parent" src="{{asset('images/user_default.jpg')}}">
+                            @else
+                            <img class="img-fluid img-parent" src="{{asset('storage/images/'.($comment->user->image))}}">
+                            @endif
                             <h5 class="mr-2">{{$comment->user->name}}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{$comment["updated_at"]->diffForHumans()}}</span>
                         </div>
                         <div class="comment-text-sm">
@@ -176,7 +180,11 @@
                                     @foreach($comments as $incomment)
                                     @if($incomment["pararent_id"]==$comment["id"])
                                         <div class="d-flex flex-row align-items-center commented-user">
-                                            <img  class="img-fluid img-parent" src="{{asset('storage/images/'.($incomment->user->image??'user_default.jpg'))}}">
+                                            @if ($incomment->user->image=="user_default.jpg")
+                                            <img class="img-fluid img-parent" src="{{asset('images/user_default.jpg')}}">
+                                            @else
+                                            <img class="img-fluid img-parent" src="{{asset('storage/images/'.($incomment->user->image))}}">
+                                            @endif
                                             <h5 class="mr-2">{{$incomment->user->name}}</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">{{$incomment["updated_at"]->diffForHumans()}}</span>
                                         </div>
                                         <div class="comment-text-sm">

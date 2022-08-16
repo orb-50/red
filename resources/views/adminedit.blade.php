@@ -59,7 +59,11 @@
             </div>
             <div class="col-md-6 mb-3 mx-auto">
                 {{-- アバター表示 --}}
-                <img class="img-fluid" src="{{asset('storage/images/'.($user->image??'user_default.jpg'))}}">
+                @if ($user->image=="user_default.jpg")
+                <img class="img-fluid" src="{{asset('images/user_default.jpg')}}">
+                @else
+                <img class="img-fluid" src="{{asset('storage/images/'.($user->image))}}">
+                @endif
             </div>
 
             <div class="col-md-6 mb-3 mx-auto">
