@@ -11,7 +11,7 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Comment;
-use App\Models\ticket;
+use App\Models\Ticket;
 use App\Models\Category;
 
 class AdminController extends Controller
@@ -80,10 +80,10 @@ class AdminController extends Controller
         $user=User::where("id",$id)->first();
         DB::transaction(function ()use($user) {
             $user->delete();
-            ticket::where("user_id",$user->id)->delete();
+            Ticket::where("user_id",$user->id)->delete();
             Comment::where("user_id",$user->id)->delete();
         });
-        return redirect()->route('userlist');
+        return redirect()->route('usermanagement');
     }
 
     public function category(User $user){

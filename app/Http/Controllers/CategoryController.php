@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
-use App\Models\ticket;
+use App\Models\Ticket;
 
 class CategoryController extends Controller
 {
@@ -36,7 +36,7 @@ class CategoryController extends Controller
     public function delete($id){
         $i=Category::findOrFail($id);
         $i->delete();
-        ticket::where("category_id",$id)->delete();
+        Ticket::where("category_id",$id)->delete();
         return redirect()->route('category.index');
     }
 }

@@ -93,7 +93,7 @@ class HomeController extends Controller
     public function store(StoreRequest $request)
     {   
         
-        $ticket = ticket::create(
+        $ticket = Ticket::create(
             [
                 'title' => $request->title,
                 'sStartAt' => $request->sStartAt,
