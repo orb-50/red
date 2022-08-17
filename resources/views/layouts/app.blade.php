@@ -58,9 +58,9 @@
                     <div class="col-md-6 mb-3">
                         <label>優先度</label>
                         <select class="custom-select d-block w-100" id="status" name="priority" required>
-                            <option value="7" selected>高</option>
+                            <option value="7" selected>低</option>
                             <option value="8">中</option>
-                            <option value="9">低</option>
+                            <option value="9">高</option>
                         </select>
                     </div>
                 </div>
