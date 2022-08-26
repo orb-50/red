@@ -6,8 +6,8 @@
     <p>こんにちは！
 @if (Auth::check())
     {{ \Auth::user()->name }}さん</p>
-    <p><a href="{{url('/ticket')}}">チケット入力</a></p>
-    <p><a href="{{url('/ticketList')}}">チケット一覧</a></p>
+    <p><a href="{{url('/ticket')}}">タスク入力</a></p>
+    <p><a href="{{url('/ticketList')}}">タスク一覧</a></p>
     <p><a href="{{route('useredit', ['id' => Auth::user()->id])}}">プロフィール編集</a></p>
     <p><a href="{{url('/logout')}}">ログアウト</a></p>
 @else

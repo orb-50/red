@@ -1,6 +1,6 @@
 @auth
 <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
-  <a class="navbar-brand" href="#">チケット管理</a>
+  <span class="navbar-brand">タスク管理</span>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -11,11 +11,11 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          チケット関連
+          タスク関連
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="{{route('ticket')}}">チケット登録</a>
-          <a class="dropdown-item" href="{{route('ticketList')}}">チケット一覧</a>
+          <a class="dropdown-item" href="{{route('ticket')}}">タスク登録</a>
+          <a class="dropdown-item" href="{{route('ticketList')}}">タスク一覧</a>
         </div>
       </li>
       <li class="nav-item dropdown">
@@ -35,17 +35,32 @@
           @endcan
         </div>
       </li>
-      @if (Auth::check()) {
-        <li class="nav-item">
-          <a class="nav-link" href="{{url('/logout')}}">ログアウト</a>
+      @if (Auth::check()) 
+      <li class="nav-item">
+        <a class="nav-link" href="{{url('/logout')}}">ログアウト</a>
       </li>
-      }
-      @else{
-        <li class="nav-item">
+      
+      @else
+      <li class="nav-item">
         <a class="nav-link" href="{{route('login')}}">ログイン</a>
       </li>
-      }
-      @endif  
+      
+      @endif
+      @auth
+      <li class="nav-item ">
+        <span class="nav-link text-light " >
+          {{Auth::user()->name}}
+          @if(Auth::user()->role=="1")
+          （管理者）
+          @elseif (Auth::user()->role=="2")
+          （スタッフ）
+          @elseif (Auth::user()->role=="3")
+          （一般ユーザー）
+          @endif
+        </span>
+      </li> 
+      @endauth
+      
     </ul>
   </div>
 </nav>

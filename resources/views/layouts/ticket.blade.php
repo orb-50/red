@@ -23,7 +23,7 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h5 class="card-title m-b-0">チケット一覧</h5>
+                        <h5 class="card-title m-b-0">タスク一覧</h5>
                     </div>
                     
                     <div class="container" th:fragment="search">
@@ -65,6 +65,10 @@
                                 </select>
                             </div>
                             <div class="text-center">
+                                <select name="sort" class="btn btn-sm btn-outline-secondary">
+                                    <option value="old" @if(request()->sort=="old") selected @endif>古い順</option>
+                                    <option value="young" @if(request()->sort=="young") selected @endif>新しい順</option>
+                                </select>
                                 <button class="btn btn-sm btn-outline-secondary" type="submit">検索</button>
                                 <a class="btn btn-sm btn-outline-secondary" href="{{route('ticketList')}}">検索条件クリア</a>
                             </div>

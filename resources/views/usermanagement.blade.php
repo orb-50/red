@@ -22,7 +22,7 @@
                             <tr>
                                 <th style="width: 20%">ユーザー名</th>
                                 <th style="width: 20%">希望職種</th>
-                                <th style="width: 20%">チケット一覧</th>
+                                <th style="width: 20%">タスク一覧</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -30,7 +30,7 @@
                                 <tr>
                                     <td style="width: 20%">{{$user->name}}</td>
                                     <td style="width: 20%">{{$user->AspiringJob}}</td>
-                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">チケット一覧</a></td>
+                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">タスク一覧</a></td>
                                     <td style="width: 10%">
                                         <a href="{{route('admin.edit',['id'=>$user->id])}}">編集</a>
                                     </td>
@@ -49,7 +49,7 @@
                             <tr>
                                 <th style="width: 20%">ユーザー名</th>
                                 <th style="width: 20%">希望職種</th>
-                                <th style="width: 20%">チケット一覧</th>
+                                <th style="width: 20%">タスク一覧</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -57,7 +57,7 @@
                                 <tr>
                                     <td style="width: 20%">{{$user->name}}</td>
                                     <td style="width: 20%">{{$user->AspiringJob}}</td>
-                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">チケット一覧</a></td>
+                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">タスク一覧</a></td>
                                     <td style="width: 10%">
                                         <a href="{{route('admin.edit',['id'=>$user->id])}}">編集</a>
                                     </td>
@@ -76,7 +76,7 @@
                             <tr>
                                 <th style="width: 20%">ユーザー名</th>
                                 <th style="width: 20%">希望職種</th>
-                                <th style="width: 20%">チケット一覧</th>
+                                <th style="width: 20%">タスク一覧</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -84,7 +84,7 @@
                                 <tr>
                                     <td style="width: 20%">{{$user->name}}</td>
                                     <td style="width: 20%">{{$user->AspiringJob}}</td>
-                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">チケット一覧</a></td>
+                                    <td style="width: 20%"><a href="{{route('userlistticket',['id'=>$user->id])}}">タスク一覧</a></td>
                                     <td style="width: 10%">
                                         <a href="{{route('admin.edit',['id'=>$user->id])}}">編集</a>
                                     </td>

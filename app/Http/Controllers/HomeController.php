@@ -206,7 +206,7 @@ class HomeController extends Controller
                             ->leftjoin("codes as C","tickets.priority","=","C.id")
                             ->where("user_id",$user->id)->orWhere("open","1")->title($request->title)
                             ->username($request->name)->category($request->category)->open($request->open)
-                            ->status($request->status)->priority($request->priority)->get();
+                            ->status($request->status)->priority($request->priority)->sort($request->sort)->get();
                             // LengthAwarePaginatorの作成
             $tickets = new LengthAwarePaginator(
                 $ticket->forPage($request->page, 7), // 現在のページのsliceした情報(現在のページ, 1ページあたりの件数)

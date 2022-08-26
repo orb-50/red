@@ -28,7 +28,7 @@
     <div class="row">
 
         <div class="col-md-10 order-md-1 mx-auto">
-            <h4 class="mb-3">チケット編集</h4>
+            <h4 class="mb-3">タスク編集</h4>
             <form class="" action="{{route('update')}}" method="post">
                 @csrf
                 <div class="row">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label>チケット説明</label>
+                    <label>タスク説明</label>
                     <textarea name="ticket_contents" id="" cols="30" rows="10" class="w-100">{{$ticket["ticket_contents"]}}</textarea>
                 </div>
                 <div class="col-md-6 mb-3">
@@ -121,7 +121,7 @@
 
                 <div class="row no-gutters">
                     <a href="{{route('home')}}" class="btn btn-primary btn-lg active col-md-4" role="button" aria-pressed="true">キャンセル</a>
-                    <button class="btn btn-primary btn-lg btn-block col-md-4 offset-md-4" type="submit">チケット編集</button>
+                    <button class="btn btn-primary btn-lg btn-block col-md-4 offset-md-4" type="submit">タスク編集</button>
                 </div>
             </form>
         </div>

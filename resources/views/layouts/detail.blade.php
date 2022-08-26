@@ -29,7 +29,7 @@
             <div class="col-md-10 order-md-1 mx-auto">
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="firstName">チケットID&nbsp;:&nbsp;</label>
+                        <label for="firstName">タスクID&nbsp;:&nbsp;</label>
                         {{$ticket["id"]}}
                     </div>
                     @if($ticket->user_id==auth()->id()||Auth::user()->role==1)
@@ -101,7 +101,7 @@
                 </div>
             </div>
             <hr class="my-1">
-            チケット概要</br>
+            タスク概要</br>
             {{-- 改行のためこの形で表記 --}}
             {!! nl2br(htmlspecialchars($ticket["ticket_contents"])) !!}
         </div>

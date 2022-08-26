@@ -124,4 +124,14 @@ class Ticket extends Model
             return;
         }
     }
+
+    public function scopeSort($query,$sortName){
+        
+        if($sortName=='old'){
+            return $query->orderBy("updated_at","asc");
+        }
+        else if($sortName=='young'){
+            return $query->orderBy("updated_at","desc");
+        }
+    }
 }

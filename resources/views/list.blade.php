@@ -7,7 +7,7 @@
 <body>　　　ユーザーid:{{$user->id}} 名前:{{$user->name}}
     <table>
         <tr>
-            <th>チケットid</th>
+            <th>タスクid</th>
             <th>タイトル</th>
             <th>開始予定日</th>
             <th>終了予定日</th>

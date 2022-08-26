@@ -24,14 +24,15 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' =>'required',
+            'title' =>'required|string|max:255',
             'open' =>'required',
             'status' =>'required',
             'priority' =>'required',
             'sStartAt' =>'required',
             'sFinishAt' =>'required',
             'progress' =>'required',
-            'work_hours' =>'required|numeric',
+            "ticket_contents"=>'required|max:255',
+            'work_hours' =>'required|numeric|max:255',
         ];
     }
 }

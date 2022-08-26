@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    aaaaaaaaaaaaaa
     <form name="registform" action="{{url('/ticket')}}" method="post" id="">
         {{ csrf_field() }}
         <dt>タイトル：</dt>
@@ -64,12 +65,12 @@
         <div class="form-group row col-8 mx-auto">
             <div class="col-sm-6">
                 <label>タイトル</label>
-                <input name="title" class="" required type="text">
+                <input name="title" class="" value="{{ old('title') }}" required type="text">
             </div>
             <div class="col-sm-6">
                 <label>カテゴリー</label>
                 <select name="category_id" 　class="" id="" ">
-                    <option value=" 1" selected>Aカテゴリー</option>
+                    <option value=" 1" selected >Aカテゴリー</option>
                     <option value="2">Bカテゴリー</option>
                     <option value="3">cカテゴリー</option>
                 </select>
