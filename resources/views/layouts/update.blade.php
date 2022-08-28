@@ -54,17 +54,17 @@
                     <div class="col-md-6 mb-3">
                         <label>状態</label>
                         <select class="custom-select d-block w-100" id="status" name="status" required>
-                            <option value="6">完了</option>
-                            <option value="5">着手中</option>
-                            <option value="4" selected>未着手</option>
+                            <option value="6" @if($ticket["status"]=="6") selected  @endif>完了</option>
+                            <option value="5" @if($ticket["status"]=="5") selected  @endif>着手中</option>
+                            <option value="4" @if($ticket["status"]=="4") selected  @endif>未着手</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">
                         <label>優先度</label>
                         <select class="custom-select d-block w-100" id="status" name="priority" required>
-                            <option value="9" selected>高</option>
-                            <option value="8">中</option>
-                            <option value="7">低</option>
+                            <option value="9" @if($ticket["priority"]=="9") selected  @endif>高</option>
+                            <option value="8" @if($ticket["priority"]=="8") selected  @endif>中</option>
+                            <option value="7" @if($ticket["priority"]=="7") selected  @endif>低</option>
                         </select>
                     </div>
                 </div>
@@ -73,9 +73,9 @@
                     <div class="col-md-6 mb-3">
                         <label>公開・非公開</label>
                         <select class="custom-select d-block w-100" id="status" name="open" required>
-                            <option value="1" selected>公開</option>
-                            <option value="2">スタッフにのみ公開</option>
-                            <option value="3">非公開</option>
+                            <option value="1" @if($ticket["open"]=="1") selected  @endif>公開</option>
+                            <option value="2" @if($ticket["open"]=="2") selected  @endif>スタッフにのみ公開</option>
+                            <option value="3" @if($ticket["open"]=="3") selected  @endif>非公開</option>
                         </select>
                     </div>
                     <div class="col-md-6 mb-3">

@@ -112,7 +112,7 @@
                 <div class="col-md-6 mb-3">
                     <label for="work_hours">作業時間</label>
                     <div class="row">
-                        <input type="text" class="form-control w-25" id="work_hours" value="{{ old('work_hours') }}" name="work_hours" required>
+                        <input type="text" class="form-control w-25" id="work_hours" value="{{  old("work_hours") != "" ? old("work_hours") : "0" }}" name="work_hours" required>
                         <span class="mt-2">時間</span>
                     </div>
                 </div>
